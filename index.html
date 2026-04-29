@@ -1,0 +1,501 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Cognitive Guard Protocol — Evidence-Based Neural Support for Everyday Life</title>
+    <meta name="description" content="Discover the Cognitive Guard Protocol: a science-forward approach combining structured habits and NeuroDyne supplementation for proactive brain health.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Merriweather:wght@400;700;900&family=Source+Sans+3:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        :root { --bg:#ffffff; --ink:#0f172a; --muted:#475569; --line:#e2e8f0; --accent:#0891b2; --accent-2:#ecfeff; --maxw:980px; --radius:12px; }
+        *{box-sizing:border-box;margin:0;padding:0}
+        body{font-family:'Source Sans 3',system-ui,sans-serif;background:var(--bg);color:var(--ink);line-height:1.7;-webkit-font-smoothing:antialiased}
+        img{max-width:100%;height:auto;display:block}
+        a{color:var(--accent);text-decoration:none}
+        a:hover{text-decoration:underline}
+        h1,h2,h3{font-family:'Merriweather',Georgia,serif;line-height:1.3}
+        .main-wrapper{max-width:100%;overflow-x:hidden}
+        .wrap{max-width:var(--maxw);margin:0 auto;padding:18px}
+
+        /* ADVERTISEMENT bar */
+        .header-ad{background:#000;color:#fff;text-align:center;padding:8px;font-size:9px;letter-spacing:1.5px;text-transform:uppercase;font-family:'Source Sans 3',sans-serif}
+
+        /* Sticky topbar */
+        .topbar{display:flex;align-items:center;justify-content:space-between;gap:12px;border-bottom:1px solid var(--line);padding:10px 0;position:sticky;top:0;background:#fffffffa;z-index:20;backdrop-filter:blur(6px)}
+        .sponsored{display:flex;align-items:center;gap:8px;font-size:12px;color:#64748b}
+        .dot{width:8px;height:8px;border-radius:50%;background:var(--accent)}
+        .badge{padding:4px 10px;border:1px solid var(--line);border-radius:999px;background:#f8fafc;color:#64748b;font-size:11px;font-weight:600}
+
+        /* Buttons */
+        .btn{display:inline-block;background:var(--accent);color:#fff;font-weight:700;border-radius:10px;padding:13px 22px;border:0;text-align:center;font-family:'Source Sans 3',sans-serif;font-size:15px;transition:filter .2s}
+        .btn:hover{text-decoration:none;filter:brightness(1.08)}
+        .btn-outline{display:inline-block;border:2px solid var(--accent);color:var(--accent);background:#fff;border-radius:10px;padding:11px 20px;font-weight:700;text-align:center;font-size:15px;transition:background .2s}
+        .btn-outline:hover{background:var(--accent-2);text-decoration:none}
+
+        /* Cards */
+        .card{border:1px solid var(--line);border-radius:var(--radius);padding:20px;background:#fff;margin-bottom:16px}
+
+        /* Hero */
+        .hero{display:grid;grid-template-columns:1.2fr .8fr;gap:20px;margin-top:14px}
+        .hero h1{font-size:26px;margin:0 0 10px;color:var(--ink)}
+        .sub{color:var(--muted);margin:8px 0 0;font-size:15px}
+        .meta{display:flex;flex-wrap:wrap;gap:14px;color:#94a3b8;font-size:13px;margin-top:10px}
+        .toc{display:flex;flex-wrap:wrap;gap:8px;margin:12px 0 0}
+        .toc a{border:1px solid var(--line);border-radius:999px;padding:7px 14px;font-size:12px;background:#f8fafc;color:var(--ink);font-weight:500}
+        .toc a:hover{background:var(--accent-2);border-color:var(--accent);text-decoration:none}
+
+        /* Note & Blockquote */
+        .note{background:var(--accent-2);border:1px solid #a5f3fc;padding:14px;border-radius:10px;font-size:.94rem;color:#164e63}
+        .blockquote{border-left:3px solid var(--accent);padding:12px 16px;background:#f0fdfa;border-radius:8px;color:#334155;font-style:italic}
+
+        /* Grids & Lists */
+        .grid-2{display:grid;grid-template-columns:1fr 1fr;gap:16px}
+        .list{display:grid;gap:8px;margin:10px 0 0;padding:0}
+        .list li{list-style:none;background:#f8fafc;border:1px solid var(--line);border-radius:10px;padding:12px 14px;font-size:.95rem}
+
+        /* Steps */
+        .steps{counter-reset:step}
+        .steps li{position:relative;padding-left:48px}
+        .steps li::before{counter-increment:step;content:counter(step);position:absolute;left:12px;top:12px;width:24px;height:24px;border-radius:50%;background:var(--accent);color:#fff;display:grid;place-items:center;font-weight:700;font-size:13px}
+
+        /* Offer section */
+        #offer-NeuroDyne .offer-wrap{display:grid;grid-template-columns:1fr 1.2fr;gap:18px;align-items:center}
+        #offer-NeuroDyne .offer-img{border:1px solid var(--line);border-radius:12px;overflow:hidden}
+        #offer-NeuroDyne .bullets{display:grid;gap:8px;text-align:left;margin:12px 0 16px}
+        #offer-NeuroDyne .ingredients{background:#f0fdfa;border:1px solid #a5f3fc;border-radius:10px;padding:14px;margin-top:12px;font-size:.94rem;color:#164e63}
+        #offer-NeuroDyne .ingredients h4{margin:0 0 6px;font-size:1rem;color:#0e7490}
+        #offer-NeuroDyne .ingredients ul{margin:0;padding-left:20px}
+        #offer-NeuroDyne .guarantee{font-size:.93rem;color:var(--muted);margin-top:10px}
+
+        /* Evidence box */
+        .evidence-box{background:#fff;border:1px solid var(--line);border-radius:14px;padding:22px;margin:24px 0}
+        .evidence-box .study{border:1px solid var(--line);border-radius:10px;padding:14px;margin:12px 0;background:#fafcfe}
+
+        /* Sticky CTA bar */
+        .sticky-cta{position:sticky;bottom:10px;z-index:15;margin-top:22px}
+        .bar{display:flex;align-items:center;gap:12px;border:1px solid var(--line);border-radius:12px;padding:12px;background:#fffffff2;backdrop-filter:blur(8px);box-shadow:0 4px 20px rgba(0,0,0,.06)}
+        .bar .copy{flex:1;color:var(--muted);font-size:14px}
+        .adchip{font-size:11px;padding:4px 8px;border-radius:999px;border:1px solid var(--line);background:#f8fafc;color:#64748b;font-weight:600}
+
+        /* Footer & Disclaimers */
+        .footer{margin:28px 0;color:#64748b;font-size:13px;text-align:center}
+        .disclaimer-box{text-align:center;font-size:18px;font-weight:700;color:#0f172a;background:#fff;padding:20px 14px;border-bottom:2px solid var(--line)}
+        .footer-links{text-align:center;margin:22px 0}
+        .footer-links ul{display:flex;justify-content:center;gap:18px;list-style:none;padding:0}
+        .footer-links a{color:var(--accent);font-size:14px}
+        .footer-text{text-align:center;font-size:13px;color:#64748b;margin-bottom:20px;padding:0 20px;line-height:1.7}
+
+        /* Details/FAQ */
+        details{border:1px solid var(--line);border-radius:10px;padding:14px;margin:8px 0;background:#fafcfe}
+        details[open]{background:var(--accent-2)}
+        summary{cursor:pointer;font-weight:600;font-size:15px;color:var(--ink)}
+        summary:hover{color:var(--accent)}
+        details p{margin-top:8px;font-size:.94rem;color:var(--muted)}
+
+        /* CTA section */
+        .cta-section{text-align:center}
+        .cta-section h2{color:var(--ink)}
+
+        @media(max-width:860px){
+            .hero{grid-template-columns:1fr}
+            .wrap{padding:14px}
+            .btn,.btn-outline{width:100%;text-align:center}
+            .bar{flex-direction:column;align-items:stretch}
+            #offer-NeuroDyne .offer-wrap{grid-template-columns:1fr}
+            .footer-links ul{flex-direction:column;gap:10px}
+            .grid-2{grid-template-columns:1fr}
+        }
+    </style>
+</head>
+<body>
+
+    <div class="header-ad">
+        <h1 style="font-size:9px;letter-spacing:1.5px;margin:0">ADVERTISEMENT</h1>
+    </div>
+
+    <div class="main-wrapper">
+        <div class="wrap">
+
+            <header class="topbar" role="banner">
+                <div class="sponsored"><span class="dot" aria-hidden="true"></span><span class="badge">Sponsored</span></div>
+                <a class="btn" href="https://www.healthtodaynow.com/neurodyne/?afid=HuJIHfnuJH" rel="nofollow sponsored noopener">Guard Your Cognition with NeuroDyne</a>
+            </header>
+
+            <!-- HERO -->
+            <section class="hero" aria-label="Article header">
+                <article class="card">
+                    <h1>The Cognitive Guard Protocol: A Science-Forward Approach to Protecting Your Mental Edge</h1>
+                    <p class="sub">Cognitive decline does not announce itself. By the time lapses become noticeable, years of subtle erosion may have already occurred. This evidence-based editorial examines a structured, <strong>neuroprotective protocol</strong> combining targeted habits with <em>NeuroDyne</em> supplementation to help guard your cognitive function proactively.</p>
+                    <div class="meta"><span>Sponsored editorial &mdash; not medical advice</span> <span>~5 min read</span> <span>Updated: <span id="updated"></span></span></div>
+                    <nav class="toc" aria-label="Table of contents">
+                        <a href="#understanding">Understanding Decline</a>
+                        <a href="#pillars">Two Pillars</a>
+                        <a href="#neurodyne">NeuroDyne's Role</a>
+                        <a href="#protocol">The Protocol</a>
+                        <a href="#assessment">Assessment</a>
+                        <a href="#faq">FAQ</a>
+                    </nav>
+                </article>
+                <aside class="card" aria-label="Transparency disclosure">
+                    <div class="note" style="margin-top:6px"><strong>Transparency Notice:</strong> This page is advertising content produced for informational purposes. It does not constitute medical advice. Individual outcomes vary. Always read product labels carefully and consult a qualified healthcare professional before altering your diet, supplement regimen, or health routine.</div>
+                </aside>
+            </section>
+
+            <!-- SECTION 1: Understanding Cognitive Decline -->
+            <section id="understanding" class="card" style="margin-top:18px">
+                <h2>Understanding Cognitive Decline: What You Can Do</h2>
+                <p>Neural plasticity &mdash; the brain's capacity to reorganize and form new synaptic connections
+                    &mdash; does not cease with age, but it does decelerate. Research consistently demonstrates
+                    that proactive, evidence-based interventions can influence the trajectory of cognitive aging.
+                    The question is not whether decline is inevitable, but whether you are taking a deliberate,
+                    structured approach to guarding against it.</p>
+                <p style="margin-top:10px">Most adults begin to notice subtle shifts in recall speed and
+                    attentional stamina during their late 30s and 40s. These are not pathological signs &mdash;
+                    they are normal neurobiological transitions. However, the gap between those who guard their
+                    cognition proactively and those who do not tends to widen with each passing decade.</p>
+                <p style="margin-top:10px">A cognitive guard strategy rests on two principles:
+                    <strong>reducing nightly neural clutter</strong> through structured wind-down, and
+                    <strong>providing targeted nutritional support</strong> during waking hours. Neither alone
+                    is sufficient. Together, they form the basis of what we term the <em>Cognitive Guard Method</em>.</p>
+                <div class="blockquote" style="margin-top:12px">The goal is not to reverse aging. It is to
+                    build a defensible perimeter around the cognitive functions you rely on daily &mdash;
+                    working memory, sustained attention, and information recall.</div>
+            </section>
+
+            <!-- SECTION 2: Two Pillars -->
+            <section id="pillars" class="card" style="margin-top:16px">
+                <h2>Two Pillars of the Cognitive Guard Method</h2>
+                <div class="grid-2">
+                    <div>
+                        <h3 style="color:var(--accent)">Pillar I: Evening Neural Wind-Down</h3>
+                        <ul class="list">
+                            <li><strong>Cognitive offloading:</strong> Externalizing unfinished tasks and lingering thoughts into a written format reduces prefrontal cortex load during sleep onset.</li>
+                            <li><strong>Sleep-onset consistency:</strong> A fixed 15-minute pre-sleep routine signals the hypothalamus to initiate circadian-aligned rest, supporting overnight memory consolidation.</li>
+                            <li><strong>Stimulus restriction:</strong> Limiting blue-light exposure and novel information intake in the final hour before sleep guards against cortisol-mediated interference.</li>
+                        </ul>
+                    </div>
+                    <div>
+                        <h3 style="color:var(--accent)">Pillar II: Daytime Neuroprotective Supplementation</h3>
+                        <ul class="list">
+                            <li><strong>Targeted botanicals:</strong> Compounds such as Bacopa monnieri and Ginkgo biloba have been studied for their potential to support cerebral blood flow and acetylcholine signaling.</li>
+                            <li><strong>Amino acid support:</strong> L-Theanine promotes alpha-wave activity associated with calm, focused attention without sedation.</li>
+                            <li><strong>Metabolic cofactors:</strong> B-vitamin complexes serve as essential coenzymes in neurotransmitter synthesis and myelin maintenance.</li>
+                        </ul>
+                    </div>
+                </div>
+            </section>
+
+            <!-- SECTION 3: Where NeuroDyne Enters -->
+            <section id="neurodyne" class="card" style="margin-top:16px">
+                <h2>Where NeuroDyne Enters the Equation</h2>
+                <p>NeuroDyne is formulated as a <strong>daily dietary supplement for adults</strong> seeking
+                    neuroprotective support for memory, focus, and cognitive clarity. It is not positioned as
+                    a cure or treatment. Rather, it serves as the supplementation pillar within the Cognitive
+                    Guard framework &mdash; a consistent, daily input designed to complement structured
+                    behavioral habits.</p>
+                <p style="margin-top:10px">The formulation targets multiple pathways simultaneously:
+                    cerebrovascular support through Ginkgo biloba, cholinergic modulation via Bacopa monnieri,
+                    and calm-focus enhancement through L-Theanine. This multi-vector approach reflects current
+                    understanding that cognitive guard requires addressing more than a single mechanism.</p>
+                <div class="note" style="margin-top:12px">
+                    <strong>Clinical Framing:</strong> NeuroDyne contains compounds with peer-reviewed research
+                    behind them (referenced in the Scientific Substantiation section below). However, no supplement
+                    replaces adequate sleep, physical activity, or medical oversight. The Cognitive Guard Protocol
+                    uses NeuroDyne as one component within a multi-factorial, evidence-informed approach.
+                </div>
+                <div style="display:flex;gap:10px;flex-wrap:wrap;margin-top:16px">
+                    <a class="btn" href="https://www.healthtodaynow.com/neurodyne/?afid=HuJIHfnuJH" rel="nofollow sponsored noopener">Guard Your Cognition with NeuroDyne</a>
+                    <a href="#protocol" class="btn-outline">View the Full Protocol</a>
+                </div>
+            </section>
+
+            <!-- SECTION 4: The Cognitive Guard Protocol -->
+            <section id="protocol" class="card" style="margin-top:16px">
+                <h2>The Cognitive Guard Protocol</h2>
+                <p>Follow these four ordered steps consistently for a minimum of 21 days before evaluating
+                    subjective cognitive changes. The protocol is designed to be low-friction and compatible
+                    with most daily schedules:</p>
+                <ol class="list steps" style="margin-top:14px">
+                    <li><strong>NeuroDyne in the morning:</strong> Take NeuroDyne as directed on the label
+                        with your first meal. Morning administration aligns with the brain's peak cholinergic
+                        activity window, supporting daytime focus and recall. Consistency of timing matters
+                        more than the exact hour.</li>
+                    <li><strong>Hydration + movement:</strong> Consume at least two glasses of water by midday
+                        and integrate 10&ndash;15 minutes of light movement (walking, stretching, or standing
+                        desk intervals). Cerebral perfusion is directly influenced by hydration status and
+                        physical activity &mdash; even modest amounts.</li>
+                    <li><strong>Evening brain dump:</strong> Spend 3&ndash;5 minutes before your wind-down
+                        period writing down unresolved tasks, ideas, and next-day priorities. This cognitive
+                        offloading protocol has been shown to accelerate sleep onset and reduce pre-sleep
+                        rumination. Use a dedicated notebook or a single notes app &mdash; the medium matters
+                        less than the habit.</li>
+                    <li><strong>Sleep consistency:</strong> Maintain a fixed sleep and wake time within a
+                        30-minute variance window, including weekends. Circadian regularity is among the
+                        strongest predictors of sustained cognitive performance across clinical literature.</li>
+                </ol>
+                <div class="blockquote" style="margin-top:12px">Protocol adherence is the differentiator.
+                    Sporadic implementation yields sporadic results. Guard your cognition through disciplined,
+                    daily repetition &mdash; not intensity, but consistency.</div>
+            </section>
+
+            <!-- SECTION 5: Honest Assessment -->
+            <section id="assessment" class="card" style="margin-top:16px">
+                <h2>An Honest Assessment</h2>
+                <p style="margin-bottom:12px">Any credible cognitive guard strategy must acknowledge both
+                    its strengths and its boundaries. Below is our transparent evaluation:</p>
+                <div class="grid-2">
+                    <div>
+                        <h3 style="color:#059669">Evidence-Based Strengths</h3>
+                        <ul class="list">
+                            <li>Ingredients supported by peer-reviewed clinical trials on memory,
+                                attention, and processing speed.</li>
+                            <li>Protocol is low-friction and integrates with existing daily routines
+                                without requiring significant lifestyle disruption.</li>
+                            <li>Emphasizes behavioral fundamentals (sleep, hydration, movement)
+                                alongside supplementation &mdash; not as a replacement for them.</li>
+                            <li>Transparent ingredient list with established botanical compounds
+                                and no proprietary blend obfuscation.</li>
+                            <li>Multi-factorial approach addresses cognition from multiple angles
+                                rather than relying on a single mechanism.</li>
+                        </ul>
+                    </div>
+                    <div>
+                        <h3 style="color:#dc2626">Limitations to Acknowledge</h3>
+                        <ul class="list">
+                            <li>Not a substitute for medical evaluation of cognitive symptoms or
+                                neurodegenerative conditions.</li>
+                            <li>Individual neurochemistry, genetics, and health status vary;
+                                results are not guaranteed for any user.</li>
+                            <li>Requires consistent adherence over multiple weeks to fairly
+                                evaluate subjective effects.</li>
+                            <li>Supplement efficacy data often derives from small-sample,
+                                short-duration trials with moderate effect sizes.</li>
+                            <li>Not evaluated by the FDA for therapeutic claims; classified
+                                as a dietary supplement, not a medication.</li>
+                        </ul>
+                    </div>
+                </div>
+            </section>
+
+            <!-- SECTION 6: FAQ -->
+            <section id="faq" class="card" style="margin-top:16px">
+                <h2>Questions &amp; Answers</h2>
+                <details open>
+                    <summary>Does the Cognitive Guard Protocol guarantee cognitive improvement?</summary>
+                    <p>No. This is an informational, ad-supported editorial outlining a structured approach that may support cognitive wellness. No outcomes are guaranteed. Individual neurobiology, lifestyle, and health status all influence results.</p>
+                </details>
+                <details>
+                    <summary>Is NeuroDyne classified as a pharmaceutical or medical device?</summary>
+                    <p>No. NeuroDyne is a dietary supplement for adults. It is not intended to diagnose, treat, cure, or prevent any disease. It has not been evaluated by the FDA for therapeutic claims.</p>
+                </details>
+                <details>
+                    <summary>What is the minimum evaluation period for the protocol?</summary>
+                    <p>We recommend a minimum of 21 consecutive days of consistent protocol adherence before assessing subjective cognitive changes. Most clinical trials on the constituent compounds span 8&ndash;12 weeks.</p>
+                </details>
+                <details>
+                    <summary>Can I take NeuroDyne alongside prescription medications?</summary>
+                    <p>Consult your prescribing physician or pharmacist before combining any dietary supplement with prescription medications. This is particularly important for individuals on anticoagulants, antihypertensives, or neuropsychiatric medications.</p>
+                </details>
+                <details>
+                    <summary>Where is the official NeuroDyne checkout?</summary>
+                    <p>All "Guard Your Cognition" and "Start the Cognitive Guard Protocol" buttons on this
+                        page link directly to the official NeuroDyne checkout page. Tracking parameters are
+                        preserved automatically.</p>
+                </details>
+                <details>
+                    <summary>Is the Cognitive Guard Protocol suitable for all ages?</summary>
+                    <p>The protocol is designed for adults. If you are under 18, pregnant, nursing, or have
+                        a pre-existing medical condition, consult your healthcare provider before beginning
+                        any new supplement regimen or making significant changes to your routine.</p>
+                </details>
+                <details>
+                    <summary>What differentiates this from other cognitive health approaches?</summary>
+                    <p>The Cognitive Guard Protocol integrates behavioral science (structured wind-down,
+                        circadian consistency) with targeted botanical supplementation. It is not a
+                        single-product pitch &mdash; it is a structured, multi-pillar framework where
+                        NeuroDyne serves as the supplementation component within a broader evidence-informed
+                        system.</p>
+                </details>
+            </section>
+
+            <!-- CTA Section -->
+            <section class="cta-section card" style="margin-top:16px">
+                <div class="adchip" style="margin-bottom:10px">Sponsored</div>
+                <h2>Guard Your Cognitive Future</h2>
+                <p class="sub">The evidence is clear: proactive, structured neuroprotective habits outperform
+                    reactive approaches. Begin the Cognitive Guard Protocol today and give your brain the
+                    consistent, daily support it requires.</p>
+                <p class="sub" style="margin-top:6px">You will be directed to the official NeuroDyne
+                    checkout page upon clicking.</p>
+                <p style="margin-top:16px">
+                    <a class="btn" href="https://www.healthtodaynow.com/neurodyne/?afid=HuJIHfnuJH" rel="nofollow sponsored noopener">Start the Cognitive Guard Protocol</a>
+                </p>
+                <p style="color:#94a3b8;font-size:12px;margin-top:8px">
+                    Your purchase may support this site at no additional cost to you.
+                </p>
+            </section>
+
+            <!-- Offer Section -->
+            <section id="offer-NeuroDyne" class="card" style="margin-top:16px">
+                <div class="adchip" style="margin-bottom:10px">Sponsored</div>
+                <h2>Neuroprotective Support with <strong>NeuroDyne</strong></h2>
+                <p class="sub">Targeted cognitive support for memory, attention, and mental clarity. Review the formulation and ingredients below.</p>
+                <div class="offer-wrap" style="margin-top:14px">
+                    <figure class="offer-img"><img src="images/7a25ba7ecd32f75c39378b1043b4.jpg" alt="NeuroDyne — Cognitive guard supplement for memory and focus support" loading="lazy"></figure>
+                    <div class="offer-copy">
+                        <ul class="bullets">
+                            <li>&#10003; Formulated to support <strong>working memory</strong> and information retrieval.</li>
+                            <li>&#10003; Promotes <strong>sustained attention</strong> during cognitively demanding tasks.</li>
+                            <li>&#10003; Designed for daily use as part of a structured cognitive guard protocol.</li>
+                            <li>&#10003; Contains botanicals with documented neuroprotective research profiles.</li>
+                        </ul>
+                        <div class="ingredients">
+                            <h4>Key Ingredients &mdash; Evidence-Based Compounds:</h4>
+                            <ul>
+                                <li><strong>Ginkgo Biloba</strong> &mdash; Supports cerebral blood flow and antioxidant defense in neural tissue.</li>
+                                <li><strong>Bacopa Monnieri</strong> &mdash; Studied for improvements in working memory and cognitive processing speed.</li>
+                                <li><strong>L-Theanine</strong> &mdash; Promotes alpha-wave brain activity associated with alert, focused calm.</li>
+                                <li><strong>Panax Ginseng</strong> &mdash; Investigated for sustained cognitive performance and mental energy.</li>
+                                <li><strong>Vitamin B Complex</strong> &mdash; Essential coenzymes for neurotransmitter synthesis and neural metabolism.</li>
+                            </ul>
+                        </div>
+                        <div style="display:flex;gap:10px;flex-wrap:wrap;margin-top:14px">
+                            <a class="btn" href="https://www.healthtodaynow.com/neurodyne/?afid=HuJIHfnuJH" rel="nofollow sponsored noopener">Get NeuroDyne Today</a>
+                            <a class="btn-outline" href="https://www.healthtodaynow.com/neurodyne/?afid=HuJIHfnuJH" rel="nofollow sponsored noopener">View Official Offer</a>
+                        </div>
+                        <p class="guarantee">Secure checkout on the official NeuroDyne page. Tracking parameters are preserved automatically.</p>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Sticky CTA bar -->
+            <div class="sticky-cta">
+                <div class="bar">
+                    <span class="adchip">Ad</span>
+                    <div class="copy">NeuroDyne: daily neuroprotective support for memory, focus, and cognitive guard.</div>
+                    <a class="btn" href="https://www.healthtodaynow.com/neurodyne/?afid=HuJIHfnuJH" rel="nofollow sponsored noopener">Start the Cognitive Guard Protocol</a>
+                </div>
+            </div>
+
+            <!-- Footer -->
+            <footer class="footer" role="contentinfo">
+                <p><strong>Important:</strong> This page is advertising content for informational purposes only. It does not provide medical advice and does not constitute a diagnosis, treatment, or cure for any condition. Individual experiences vary. Consult a qualified healthcare professional for personalized guidance.</p>
+                <p>&copy; <span id="year"></span> cognitivetoguardyou.com</p>
+            </footer>
+
+        </div>
+    </div>
+
+    <!-- FDA Disclaimer Box 1 -->
+    <div class="disclaimer-box">
+        These statements have not been evaluated by the FDA. This product is not intended to diagnose, treat, cure, or prevent any disease.
+    </div>
+
+    <!-- FDA Disclaimer Box 2 -->
+    <div class="disclaimer-box">
+        THIS IS AN ADVERTISEMENT AND NOT AN ACTUAL NEWS ARTICLE, BLOG, OR CONSUMER PROTECTION UPDATE.
+    </div>
+
+    <!-- Scientific Substantiation -->
+    <div class="wrap">
+        <section class="evidence-box" aria-labelledby="substantiation-title">
+            <h2 id="substantiation-title">Scientific Substantiation &amp; Disclosures &mdash; Memory &amp; Cognitive Support</h2>
+            <p>The cognitive support claims referenced on this page are grounded in peer-reviewed research on natural compounds studied for <em>memory, attention, and processing speed</em>. Below are direct citations including <strong>authors/institutions</strong>, <strong>study context</strong>, and <strong>publication year</strong>.</p>
+            <div class="note" role="note"><strong>Claim alignment:</strong> We reference studies investigating the same compound classes present in the Cognitive Guard Protocol discussion (e.g., <em>Bacopa monnieri</em>, L-theanine, phosphatidylserine). Results vary by dose, duration, and population. This is informational content &mdash; not medical advice.</div>
+
+            <h3 style="margin-top:16px">Minimum Criteria for Referenced Studies</h3>
+            <ul style="padding-left:20px;margin:8px 0">
+                <li><strong>Alignment:</strong> Each study examines memory, attention, or cognitive speed outcomes related to the cited compound.</li>
+                <li><strong>Specificity:</strong> References evaluate the same active ingredient or proposed mechanism of action.</li>
+                <li><strong>Credibility:</strong> Clinical trials and reviews by qualified researchers published in recognized peer-reviewed journals.</li>
+                <li><strong>Transparency:</strong> Authors/institutions, study context, and publication year are disclosed.</li>
+            </ul>
+
+            <h3 style="margin-top:16px">Referenced Studies</h3>
+
+            <article class="study">
+                <h3>Bacopa monnieri Improves Working Memory (Randomized, Double-Blind, 90 Days)</h3>
+                <p class="meta">Authors/Institution: Stough et al. &bull; Study Type: Clinical Trial &bull; Year: 2008</p>
+                <p>Finding: Significant improvements in working memory accuracy compared to placebo after 90 days of supplementation.</p>
+                <p>Source: <a href="https://pubmed.ncbi.nlm.nih.gov/18683852/" target="_blank" rel="noopener">PubMed</a></p>
+            </article>
+
+            <article class="study">
+                <h3>Chronic Bacopa Extract and Cognitive Function in Healthy Adults</h3>
+                <p class="meta">Authors/Institution: Stough et al. &bull; Study Type: Clinical Trial &bull; Year: 2001</p>
+                <p>Finding: Chronic Bacopa supplementation demonstrated improvements in cognitive performance in healthy adult subjects.</p>
+                <p>Source: <a href="https://pubmed.ncbi.nlm.nih.gov/11498727/" target="_blank" rel="noopener">PubMed</a></p>
+            </article>
+
+            <article class="study">
+                <h3>Standardized Bacopa Extract in Age-Associated Memory Impairment</h3>
+                <p class="meta">Authors/Institution: Raghav et al. &bull; Study Type: Clinical Trial &bull; Year: 2006</p>
+                <p>Finding: Improvements in mental control, logical memory, and paired associative learning in subjects with AAMI after 12 weeks.</p>
+                <p>Source: <a href="https://pmc.ncbi.nlm.nih.gov/articles/PMC2915594/" target="_blank" rel="noopener">NIH/PMC</a></p>
+            </article>
+
+            <article class="study">
+                <h3>L-Theanine + Caffeine: Attention and Cognitive Task Performance</h3>
+                <p class="meta">Authors/Institution: Haskell et al. &bull; Study Type: Clinical Trial &bull; Year: 2008</p>
+                <p>Finding: The combination improved measures of attention and alertness during demanding cognitive tasks compared to caffeine alone.</p>
+                <p>Source: <a href="https://pubmed.ncbi.nlm.nih.gov/18006208/" target="_blank" rel="noopener">PubMed</a></p>
+            </article>
+
+            <article class="study">
+                <h3>L-Theanine + Caffeine: Attention Switching and Distraction Resistance</h3>
+                <p class="meta">Authors/Institution: Owen et al. &bull; Study Type: Clinical Trial &bull; Year: 2008</p>
+                <p>Finding: Improved speed and accuracy in attention-switching tasks and reduced distractibility in memory assessments.</p>
+                <p>Source: <a href="https://pubmed.ncbi.nlm.nih.gov/18681988/" target="_blank" rel="noopener">PubMed</a></p>
+            </article>
+
+            <article class="study">
+                <h3>Phosphatidylserine in Age-Associated Memory Impairment (AAMI)</h3>
+                <p class="meta">Authors/Institution: Crook et al., <em>Neurology</em> &bull; Study Type: Clinical Trial &bull; Year: 1991</p>
+                <p>Finding: 12-week supplementation (100mg 3x/day) demonstrated historically cited improvements in memory parameters in AAMI subjects.</p>
+                <p>Source: <a href="https://www.neurology.org/doi/10.1212/WNL.41.5.644" target="_blank" rel="noopener">Neurology</a></p>
+            </article>
+
+            <div class="note" role="note" style="margin-top:16px"><strong>Important Limitations:</strong> Many referenced trials are short-term with modest sample sizes; observed effects tend to be moderate and depend on population characteristics, dosage, and duration. This section is educational and does not substitute for medical advice. If you have existing health conditions or take medication, consult a qualified healthcare professional.</div>
+            <div class="note" role="note" style="margin-top:10px"><strong>Marketing Disclosure:</strong> This page contains affiliate checkout links. NeuroDyne is a dietary supplement for adults and is not intended to diagnose, treat, cure, or prevent any disease.</div>
+            <p style="font-size:.9rem;color:var(--muted);margin-top:12px">&copy; <span id="year2"></span> cognitivetoguardyou.com &mdash; All rights reserved.</p>
+        </section>
+    </div>
+
+    <!-- Footer Links -->
+    <div class="footer-links">
+        <ul>
+            <li><a href="/privacy.html">Privacy Policy</a></li>
+            <li><a href="/terms.html">Terms of Service</a></li>
+            <li><a href="mailto:support@cognitivetoguardyou.com">Contact</a></li>
+        </ul>
+    </div>
+
+    <!-- Full Disclaimer Text -->
+    <div class="footer-text">
+        <p><strong>Disclaimer:</strong> The information on this website is for informational, educational, and marketing purposes only and is not a substitute for professional medical advice. The owners of this site are not medical professionals and do not claim to be. If you have a health concern, please consult with a qualified medical professional.</p>
+        <p><br>This is an advertisement and not an actual news article, blog, or consumer protection update.</p>
+        <p><br>These statements have not been evaluated by the Food and Drug Administration. This product is not intended to diagnose, treat, cure, or prevent any disease. This information is not intended to be a substitute or replacement for any medical treatment. Please seek the advice of a healthcare professional for your specific health concerns. Individual results may vary.</p>
+        <p><br>This website is a marketplace. As such, you should know that the owner has a monetary connection to the products and services advertised on the site. The owner receives payment whenever a qualified lead is referred, but that is the extent of it.</p>
+        <p><br>This website and the products &amp; services referred to on the site are advertising marketplaces. This website is an advertisement and not a news publication. Any photographs of persons used on this site are models. The owner of this site and of the products and services referred to on this site only provides a service where consumers can obtain and compare.</p>
+        <p><br>This product does not require registration with FDA as described in Resolution RDC No. 240 of July 26, 2018.</p>
+        <p><br>Copyright <span id="year3"></span> All Rights Reserved.</p>
+    </div>
+
+    <script>
+        (function() {
+            var opts = { year: "numeric", month: "long", day: "numeric" };
+            var now = new Date();
+            var el = document.getElementById("updated");
+            if (el) el.textContent = now.toLocaleDateString("en-US", opts);
+            var y = now.getFullYear();
+            ["year","year2","year3"].forEach(function(id) {
+                var e = document.getElementById(id);
+                if (e) e.textContent = y;
+            });
+        })();
+    </script>
+
+</body>
+</html>
